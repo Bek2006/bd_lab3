@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <h1>Электронный журнал</h1>
+<table border="1">
+<tr>
+ <th>Студенты</th>
+ <th>Курсы</th>
+ <th>Оценки</th>
+</tr>
+{% for e in enrollments %}
+<tr>
+ <td>{{ e.student.first_name }} {{ e.student.last_name }}</td>
+ <td>{{ e.course.course_name }}</td>
+ <td>{{ e.grade }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
