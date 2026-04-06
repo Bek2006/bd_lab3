@@ -1,16 +1,1 @@
-<!DOCTYPE html>
-<html>
-<body>
- <h1>Студенты</h1>
-<ul>
-{% for student in students %}
- <li>
- <p>{{ student.first_name }} {{ student.last_name }}</p>
- <p>{{ student.email }}</p>
- <p>{{ student.birth_date }}</p>
- Added: <b>{{ student.enrollment_date }}</b>
- </li>
-{% endfor %}
-</ul>
-</body>
-</html>
+{% extends "query_result.html" %}
