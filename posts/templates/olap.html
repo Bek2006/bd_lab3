@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}OLAP отчёты{% endblock %}
+
+{% block content %}
+<h2>OLAP-куб «Успеваемость»</h2>
+<ul>
+    <li><a href="/olap/course-rollup/">Roll-up по курсу</a></li>
+    <li><a href="/olap/student-rollup/">Roll-up по студенту</a></li>
+    <li><a href="/olap/year-rollup/">Roll-up по году</a></li>
+    <li><a href="/olap/by-course/">Slice по курсу</a></li>
+    <li><a href="/olap/by-student/">Slice по студенту</a></li>
+    <li><a href="/olap/cube-face/">Грань Курс × Студент</a></li>
+</ul>
+{% endblock %}

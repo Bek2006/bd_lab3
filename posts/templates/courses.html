@@ -1,15 +1,1 @@
-<!DOCTYPE html>
-<html>
-<body>
- <h1>Курсы</h1>
-<ul>
-{% for course in courses %}
- <li>
- <b>{{ course.course_name }}</b> ({{ course.credits }} зачетных
-единиц)
- <p>{{ course.description }}</p>
- </li>
-{% endfor %}
-</ul>
-</body>
-</html>
+{% extends "query_result.html" %}

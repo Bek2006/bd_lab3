@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Запросы ЛР 1/2{% endblock %}
+
+{% block content %}
+<h2>Запросы лабораторных работ</h2>
+<p class="hint">Нажмите «Выполнить», чтобы построить результат в виде универсальной таблицы.</p>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Действие</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for query in queries %}
+    <tr>
+        <td>{{ query.query_id }}</td>
+        <td>{{ query.title }}</td>
+        <td>{{ query.description }}</td>
+        <td><a href="/queries/{{ query.query_id }}/">Выполнить</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

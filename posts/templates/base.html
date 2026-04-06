@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BD Lab 3{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        nav a { margin-right: 12px; text-decoration: none; }
+        table { border-collapse: collapse; width: 100%; margin-top: 12px; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f3f3f3; text-align: left; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .hint { color: #666; font-size: 14px; }
+        form.inline { margin: 8px 0 16px; }
+        select, button { padding: 6px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Университет — лабораторная работа по БД</h1>
+    <nav>
+        <a href="/">Курсы</a>
+        <a href="/students/">Студенты</a>
+        <a href="/enrollments/">Электронный журнал</a>
+        <a href="/queries/">Запросы ЛР 1/2</a>
+        <a href="/olap/">OLAP</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
